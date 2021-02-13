@@ -36,7 +36,7 @@ export const AppRouter = () => {
           <PublicRoutes
               isAuth={!!uid}
               exact
-              path="/login"
+              path="/auth/login"
               component={AuthRouter}
             />
           <PrivateRoute isAuth={!!uid} exact path="/" component={GymRoutes} />
