@@ -2,9 +2,9 @@ import { fetchConToken, fetchSinToken } from "../helpers/fetch";
 import { types } from "../types/types";
 import Swal from "sweetalert2";
 
-export const startLogin = (email, password) => {
+export const startLogin = (nickname, password) => {
   return async (dispatch) => {
-    const resp = await fetchSinToken("auth", { email, password }, "POST");
+    const resp = await fetchSinToken("auth/login", { nickname, password }, "POST");
     const body = await resp.json();
 
     if (body.ok) {

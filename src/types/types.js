@@ -13,6 +13,8 @@ export const types = {
   authStartTokenRenew: "[auth] Start token renew",
   authLogout: "[auth] Logout",
 
+  userGetUser: "[user] Get User",
+
   exerciseSetActive: "[exercise] Set Active",
   exerciseShowExercises: "[exercise] Show Exercises",
   exerciseActiveAddColumn: "[exercise] Show Exercises",
