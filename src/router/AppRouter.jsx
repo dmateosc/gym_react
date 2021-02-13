@@ -24,7 +24,7 @@ export const AppRouter = () => {
     <div>
       {/*
                     exact /login
-                    exact /  - Calendar
+                    exact /  - Gym
                 
                 */}
 

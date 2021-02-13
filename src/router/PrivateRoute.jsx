@@ -10,7 +10,7 @@ export const PrivateRoute = ({ isAuth, component: Component, ...rest }) => {
     <div>
       <Route  {...rest} // Contiene el exact path 
         component={(props) => //Aqui le añade el valor del component y las propiedades que arrastraba
-          isAuth ? <Component {...props} /> : <Redirect to="/login" /> //Si no está autenticado no va al component
+          isAuth ? <Component {...props} /> : <Redirect to="/auth/login" /> //Si no está autenticado no va al component
         }></Route>
     </div>
   );
