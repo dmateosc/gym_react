@@ -12,9 +12,7 @@ export const GymScreeen = () => {
   return (
     <div>
         <h1>Centro Wellness Sierra de Gata</h1>
-        <Switch>
-        <Route exact path="/exercises/:muscle" component={ExerciseScreen}></Route>
-        </Switch>
+        
     </div>
   );
 };

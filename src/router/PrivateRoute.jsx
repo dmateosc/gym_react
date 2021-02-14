@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export const PrivateRoute = ({ isAuth, component: Component, ...rest }) => {
     
   
-
+  console.log("El componente es "+ isAuth)
   return (
     <div>
       <Route  {...rest} // Contiene el exact path 
