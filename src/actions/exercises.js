@@ -21,22 +21,46 @@ return async (dispatch) => {
 
 }
 
-export const startExerciseCreateTraining = (exercise) => ({
-
-    type: types.startActiveTraining,
-    payload: exercise
-
-})
 
 
-export const startActiveTraining = (exercise) => {
 
+export const startActiveTraining = (id,  nombre,rutina) => {
+    return(dispatch) => {
+    const exercise = {
+        id,nombre, rutina
+    }
+
+    debugger
+    dispatch(exerciseCreateTraining(exercise))
 }
-export const startAddColumnActiveTraining = () => {
-
+}
+export const startAddColumnActiveTraining = (id,rutina) => {
+    
+    return(dispatch) => {
+        
+        const exercise = {
+            id, rutina
+        }
+    
+        dispatch(exerciseUpdateActiveTraining(exercise))
+    }
 }
 
 const setExercises = (exercises) =>( {
     type: types.exerciseShowExercises,
     payload: exercises
+})
+
+const exerciseCreateTraining = (exercise) => ({
+
+    type: types.exerciseSetActiveTraining,
+    payload: exercise
+
+})
+
+const exerciseUpdateActiveTraining = (exercise) => ({
+
+    type: types.exerciseUpdateActiveTraining,
+    payload: exercise
+
 })

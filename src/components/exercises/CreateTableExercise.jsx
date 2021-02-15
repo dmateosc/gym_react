@@ -1,64 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { startAddColumnActiveTraining } from "../../actions/exercises";
+import { useForm } from "../../hooks/useForm";
+
+const initState = {peso:'',
+    repeticion: '',}
 
 export const CreateTableExercise = ({
-  pesoId,
-  repeticionId,
   index,
   setFilasTabla,
+  id,
 }) => {
-  const [formValue, setFormValue] = useState({
-    peso: "",
-    repeticion: "",
-  });
+    const dispatch = useDispatch()
+  const [formValue, handleInputChange] = useForm(initState);
 
   const { peso, repeticion } = formValue;
 
   //Crear elemento que con cada cambio modifique el valor de el ejercicio activo
   //le debo enviar el index, peso y repetición junto con el value
-  const handleInputChangePeso = (e) => {
-    setFormValue({
-      ...formValue,
-      peso: e.target.value,
-    });
-    setFilasTabla((filasTabla) =>
-      filasTabla.map((fila, indexFila) => {
-        if (indexFila === index) {
-          return formValue;
-        } else {
-          return fila;
-        }
-      })
-    );
-  };
 
-  const handleInputChangeRepeticion = (e) => {
-    setFormValue({
-      ...formValue,
-      repeticion: e.target.value,
-    });
+  useEffect(() => {
     setFilasTabla((filasTabla) =>
-      filasTabla.map((fila, indexFila) => {
-        if (indexFila === index) {
-          return formValue;
-        } else {
-          return fila;
-        }
-      })
-    );
-  };
+    filasTabla.map((fila, indexFila) => {
+    
+      if (indexFila === index) {
+        return formValue;
+      } else {
+        return fila;
+      }
+    })
+  );
+      
+  }, [peso, repeticion,dispatch])
+ 
   return (
     <div>
       <input
         type="text"
-        name={pesoId}
+        name="peso"
         value={peso}
-        onChange={handleInputChangePeso}
+        onChange={handleInputChange}
       />
       <input
         type="text"
-        name={repeticionId}
+        name="repeticion"
         value={repeticion}
-        onChange={handleInputChangeRepeticion}
+        onChange={handleInputChange}
       />
     </div>
   );

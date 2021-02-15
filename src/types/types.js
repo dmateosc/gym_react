@@ -17,8 +17,10 @@ export const types = {
 
   exerciseSetActive: "[exercise] Set Active",
   exerciseSetActiveTraining: "[exercise] Active create training",
+  exerciseUpdateActiveTraining: "[exercise] Update create training",
   exerciseShowExercises: "[exercise] Show Exercises",
   exerciseActiveAddColumn: "[exercise] Add Column Exercises",
+  
 
   
   muscleShowMuscles: "[muscle] showMuscle",
