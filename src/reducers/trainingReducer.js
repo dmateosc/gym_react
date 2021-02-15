@@ -1,8 +1,9 @@
 
 const initialState = {
     date: Date.now(),
-    trainings: [],
-    activeTraining: null
+    training: [],
+    activeTraining: null,
+    
 
 }
 

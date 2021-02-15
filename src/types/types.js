@@ -16,8 +16,9 @@ export const types = {
   userGetUser: "[user] Get User",
 
   exerciseSetActive: "[exercise] Set Active",
+  exerciseSetActiveTraining: "[exercise] Active create training",
   exerciseShowExercises: "[exercise] Show Exercises",
-  exerciseActiveAddColumn: "[exercise] Show Exercises",
+  exerciseActiveAddColumn: "[exercise] Add Column Exercises",
 
   
   muscleShowMuscles: "[muscle] showMuscle",

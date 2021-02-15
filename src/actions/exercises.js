@@ -13,7 +13,7 @@ return async (dispatch) => {
         
         dispatch(setExercises(exercises))
     } catch (error) {
-        console(error)
+        console.log(error)
     }
 }
 
@@ -21,7 +21,20 @@ return async (dispatch) => {
 
 }
 
+export const startExerciseCreateTraining = (exercise) => ({
 
+    type: types.startActiveTraining,
+    payload: exercise
+
+})
+
+
+export const startActiveTraining = (exercise) => {
+
+}
+export const startAddColumnActiveTraining = () => {
+
+}
 
 const setExercises = (exercises) =>( {
     type: types.exerciseShowExercises,

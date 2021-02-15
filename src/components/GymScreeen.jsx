@@ -12,7 +12,6 @@ export const GymScreeen = () => {
   return (
     <div>
         <h1>Centro Wellness Sierra de Gata</h1>
-        
     </div>
   );
 };
