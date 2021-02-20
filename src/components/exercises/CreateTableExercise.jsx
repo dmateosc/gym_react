@@ -35,14 +35,16 @@ export const CreateTableExercise = ({
  
   return (
     <div>
+      Peso
       <input
-        type="text"
+        type="number"
         name="peso"
         value={peso}
         onChange={handleInputChange}
       />
+      Repeticiones
       <input
-        type="text"
+        type="number"
         name="repeticion"
         value={repeticion}
         onChange={handleInputChange}

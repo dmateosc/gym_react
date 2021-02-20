@@ -42,7 +42,9 @@ export const Exercises = ({ nombre, id }) => {
 
       {!createTable && <button onClick={activeTraining}>Crear Tabla</button>}
       <form action="">
+      
         {createTable &&
+          
           filasTabla.map((filas, index) => {
             return (
               <div>

@@ -21,6 +21,7 @@ export const ExerciseScreen = () => {
     return (
         <div>
             Pagina ejercicios
+            <input type="date"/>
             {
                 exercises.ejercicios && 
                 exercises.ejercicios.map((ejercicio) => {
