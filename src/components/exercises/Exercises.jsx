@@ -38,7 +38,7 @@ export const Exercises = ({ nombre, id }) => {
 
   return (
     <div>
-      {nombre}
+      <span className="__execerise_name">{nombre}</span>
 
       {!createTable && <button onClick={activeTraining}>Crear Tabla</button>}
       <form action="">
