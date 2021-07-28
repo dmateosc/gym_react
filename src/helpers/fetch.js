@@ -37,4 +37,17 @@ const fetchConToken = (endpoint, data, method = "GET") => {
   }
 };
 
-export { fetchSinToken, fetchConToken };
+const fetchConTokenImage = (endpoint, data, method = "GET") => {
+  const url = `${baseUrl}/${endpoint}`;
+  const token = localStorage.getItem("token") || "";
+  if (method === "GET") {
+    return fetch(url, {
+      method,
+      headers: {
+        "x-token": token
+      }
+    }).then(Response => {return Response.clone()});
+  } 
+};
+
+export { fetchSinToken, fetchConToken,fetchConTokenImage };

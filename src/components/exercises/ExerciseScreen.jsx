@@ -19,7 +19,9 @@ export const ExerciseScreen = () => {
 
     
     return (
-        <div>
+        <div style={{
+            flexDirection: 'row'
+        }}>
             Pagina ejercicios
             <input type="date"/>
             {

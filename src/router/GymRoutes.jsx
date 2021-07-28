@@ -15,9 +15,8 @@ export const GymRoutes = () => {
       <Switch>
         <Route exact path="/" component={GymScreen}></Route>
         <Route exact path="/exercises/:muscle" component={ExerciseScreen}></Route>
-
         <Route exact path="/muscles" component={MuscleScreen} />
-        <Route exact path="/trainings/:fecha" component={TrainingDayScreen} />
+        <Route exact path="/training-day" component={TrainingDayScreen} />
         <Route exact path="/training" component={TrainingScreen} />
 
         <Redirect to="/muscles"></Redirect>

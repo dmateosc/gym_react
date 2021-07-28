@@ -22,6 +22,8 @@ export const types = {
   exerciseActiveAddColumn: "[exercise] Add Column Exercises",
   
 
+  trainingDay: "[training] Training Day",
+
   
   muscleShowMuscles: "[muscle] showMuscle",
 
