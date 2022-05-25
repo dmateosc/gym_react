@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^1.6.5",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "bootstrap": "^4.6.0",
+    "framer-motion": "^4.1.17",
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -18,9 +22,9 @@
     "react-thunk": "^1.0.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "sweetalert2": "^9.14.3",
     "validator": "^13.5.2",
-    "web-vitals": "^0.2.4",
-    "sweetalert2": "^9.14.3"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
